@@ -37,6 +37,10 @@ public class Car extends Actor
         {
             move(-5);
         }
-        removeTouching(man.class);
+        if(Greenfoot.isKeyDown("space"))
+        {
+            getWorld().addObject( new Bomb(), getX() , getY());
+           
+        }
 }
 }
