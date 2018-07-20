@@ -8,15 +8,22 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bomb extends Actor
 {
+    int b = 0;
+    public Bomb(int rotation)
+    {
+        b = rotation;
+    }
+    
     /**
      * Act - do whatever the Bomb wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * the 'Act' or 'Run' button gets pressed in the environment. 
+     * Use constructors to pass objects between classes
      */
     public void act() 
     {
         
-        setRotation(getRotation(Car.class));
-        move(10);
+       setRotation(b);
+       move(10);
         
        removeTouching(Man.class);
     }    
